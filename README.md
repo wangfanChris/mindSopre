@@ -14,13 +14,13 @@ pip install /usr/local/Ascend/fwkacllib/lib64/hccl-{version}-py3-none-any.whl
 
 //TODO
 配置环境变量
-# control log level. 0-DEBUG, 1-INFO, 2-WARNING, 3-ERROR, default level is WARNING.
+control log level. 0-DEBUG, 1-INFO, 2-WARNING, 3-ERROR, default level is WARNING.
 export GLOG_v=2
-# Conda environmental options
+ Conda environmental options
 LOCAL_ASCEND=/usr/local/Ascend # the root directory of run package
-# lib libraries that the run package depends on
+lib libraries that the run package depends on
 export LD_LIBRARY_PATH=${LOCAL_ASCEND}/add-ons/:${LOCAL_ASCEND}/fwkacllib/lib64:${LD_LIBRARY_PATH}
-# Environment variables that must be configured
+Environment variables that must be configured
 export TBE_IMPL_PATH=${LOCAL_ASCEND}/opp/op_impl/built-in/ai_core/tbe # TBE operator implementation tool path
 export PATH=${LOCAL_ASCEND}/fwkacllib/ccec_compiler/bin/:${PATH} # TBE operator compilation tool path
 export PYTHONPATH=${TBE_IMPL_PATH}:${PYTHONPATH} # Python library that TBE implementation depends on
